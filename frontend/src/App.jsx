@@ -16,7 +16,7 @@ function App() {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    fetch('http://localhost:3000/tasks', {
+    fetch('https://task-manager-p7q1.onrender.com/tasks', {
       headers: { 'Authorization': token }
     })
       .then(res => res.json())
@@ -49,7 +49,7 @@ function App() {
     if (newFile) formData.append('file', newFile);
 
     try {
-      const response = await fetch('http://localhost:3000/tasks', {
+      const response = await fetch('https://task-manager-p7q1.onrender.com/tasks', {
         method: 'POST',
         headers: {
           'Authorization': token
@@ -78,7 +78,7 @@ function App() {
     const token = localStorage.getItem('token');
 
     try {
-      await fetch(`http://localhost:3000/tasks/${id}`, {
+      await fetch(`https://task-manager-p7q1.onrender.com/tasks/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': token }
       });
@@ -92,7 +92,7 @@ function App() {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${id}`, {
+      const response = await fetch(`https://task-manager-p7q1.onrender.com/tasks/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await fetch('http://localhost:3000/register', {
+            const response = await fetch('https://task-manager-p7q1.onrender.com/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: email, password: password })
